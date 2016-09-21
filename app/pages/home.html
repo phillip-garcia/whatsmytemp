@@ -1,12 +1,12 @@
-<div class="container">
+
     <div class="row">
         <!--select a city start-->
         <div class="col-md-5 leftBox">
-            <div class="row">
+            <div class="row" ng-click="checkWeather()">
                 <div class="col-sm-10">San Antonio</div>
                 <div class="col-sm-2">degrees</div>
             </div>
-            <div class="row">
+            <div class="row" ng-click="checkWeather()">
                 <div class="col-sm-10">Blacksburg</div>
                 <div class="col-sm-2">degrees</div>
             </div>
@@ -33,28 +33,28 @@
         <!--Forcast Box-->
         <div class="col-md-5 rightBox">
             <h3>5 Day Forcast</h3>
-            <h4>{{ city }}</h4>
+            <h4>{{weather.name}}</h4>
             <div class="row">
                 <div class="col-sm-10">Today:</div>
-                <div class="col-sm-2">temp</div>
+                <div class="col-sm-2">{{weather.main.temp - 273.15 | number:1}}</div>
             </div>
             <div class="row">
                 <div class="col-sm-10">Tomorrow:</div>
-                <div class="col-sm-2">temp</div>
+                <div class="col-sm-2">{{weather.main.temp - 273.15 | number:1}}</div>
             </div>
             <div class="row">
                 <div class="col-sm-10">day after tomorrow</div>
-                <div class="col-sm-2">temp</div>
+                <div class="col-sm-2">{{weather.main.temp - 273.15 | number:1}}</div>
             </div>
             <div class="row">
                 <div class="col-sm-10">customdate</div>
-                <div class="col-sm-2">temp</div>
+                <div class="col-sm-2">{{weather.main.temp - 273.15 | number:1}}</div>
             </div>
             <div class="row">
                 <div class="col-sm-10">customdate</div>
-                <div class="col-sm-2">temp</div>
+                <div class="col-sm-2">{{weather.main.temp - 273.15 | number:1}}</div>
             </div>
         </div>
     </div>
-</div>
+    <pre>{{weather | json}}</pre>
 

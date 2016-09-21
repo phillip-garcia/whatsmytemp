@@ -2,12 +2,13 @@
 
 angular.module('myApp.view1', ['ngRoute'])
 
+
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: 'view1/view1.html',
+    templateUrl: 'pages/pages.html',
     controller: 'View1Ctrl'
-  }).when('/view1', {
-    templateUrl: 'view1/view1.html',
+  }).when('/pages', {
+    templateUrl: 'pages/pages.html',
     controller: 'View1Ctrl'
   }).when('/view2', {
     templateUrl: 'view2/view2.html',
@@ -16,7 +17,7 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .service('cityService', function() {
-      this.city = 'Chisinau';
+      this.city = 'San Antonio, Tx';
 })
 
 

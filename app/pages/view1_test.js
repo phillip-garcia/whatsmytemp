@@ -1,10 +1,10 @@
 'use strict';
 
-describe('myApp.view1 module', function() {
+describe('myApp.pages module', function() {
 
-  beforeEach(module('myApp.view1'));
+  beforeEach(module('myApp.pages'));
 
-  describe('view1 controller', function(){
+  describe('pages controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body
